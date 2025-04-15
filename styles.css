@@ -66,6 +66,9 @@ nav a:hover {
 
 /* Hero Section with enhanced background */
 .hero {
+    position: relative;
+    z-index: 1;
+    background: transparent;
     min-height: 100vh;
     padding-top: 80px;
     background: 
@@ -74,7 +77,6 @@ nav a:hover {
         radial-gradient(circle at 10% 90%, rgba(14, 165, 233, 0.05), transparent 40%),
         radial-gradient(circle at 90% 90%, rgba(2, 132, 199, 0.1), transparent 40%),
         linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
-    position: relative;
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -83,44 +85,12 @@ nav a:hover {
 
 /* Enhanced animated background pattern */
 .hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: 
-        linear-gradient(90deg, transparent 0%, rgba(14, 165, 233, 0.05) 50%, transparent 100%),
-        linear-gradient(90deg, var(--card-bg) 1px, transparent 1px) 0 0 / 50px 50px,
-        linear-gradient(0deg, var(--card-bg) 1px, transparent 1px) 0 0 / 50px 50px;
-    opacity: 0.6;
-    animation: gradientMove 15s ease infinite;
+    display: none;
 }
 
 /* Additional decorative elements */
 .hero::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: 
-        radial-gradient(2px 2px at 40px 60px, #0ea5e9 100%, transparent),
-        radial-gradient(2px 2px at 20px 50px, #0284c7 100%, transparent),
-        radial-gradient(2px 2px at 30px 100px, #0ea5e9 100%, transparent),
-        radial-gradient(2px 2px at 40px 60px, #0284c7 100%, transparent),
-        radial-gradient(2px 2px at 110px 90px, #0ea5e9 100%, transparent),
-        radial-gradient(2px 2px at 190px 150px, #0284c7 100%, transparent);
-    background-repeat: repeat;
-    background-size: 200px 200px;
-    opacity: 0.5;
-    animation: twinkle 4s ease-in-out infinite;
-}
-
-@keyframes twinkle {
-    0%, 100% { opacity: 0.5; }
-    50% { opacity: 0.8; }
+    display: none;
 }
 
 /* Hero container specific styles */
@@ -493,4 +463,20 @@ h1::after {
     50% {
         transform: translateY(-5px);
     }
+}
+
+#particles-js {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+}
+
+/* Ensure all content is above particles */
+nav, main, footer {
+    position: relative;
+    z-index: 1;
 } 
