@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Particles.js configuration
+    // Initialize particles.js
     particlesJS('particles-js', {
         "particles": {
             "number": {
@@ -10,37 +10,43 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             },
             "color": {
-                "value": "#0ea5e9"
+                "value": "#38bdf8"
             },
             "shape": {
                 "type": "circle"
             },
             "opacity": {
                 "value": 0.5,
-                "random": false,
+                "random": true,
                 "anim": {
-                    "enable": false
+                    "enable": true,
+                    "speed": 1,
+                    "opacity_min": 0.1,
+                    "sync": false
                 }
             },
             "size": {
                 "value": 3,
                 "random": true,
                 "anim": {
-                    "enable": false
+                    "enable": true,
+                    "speed": 2,
+                    "size_min": 0.1,
+                    "sync": false
                 }
             },
             "line_linked": {
                 "enable": true,
                 "distance": 150,
-                "color": "#0ea5e9",
+                "color": "#38bdf8",
                 "opacity": 0.4,
                 "width": 1
             },
             "move": {
                 "enable": true,
-                "speed": 6,
+                "speed": 2,
                 "direction": "none",
-                "random": false,
+                "random": true,
                 "straight": false,
                 "out_mode": "out",
                 "bounce": false
@@ -51,7 +57,7 @@ document.addEventListener('DOMContentLoaded', function() {
             "events": {
                 "onhover": {
                     "enable": true,
-                    "mode": "repulse"
+                    "mode": "grab"
                 },
                 "onclick": {
                     "enable": true,
@@ -60,9 +66,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 "resize": true
             },
             "modes": {
-                "repulse": {
-                    "distance": 100,
-                    "duration": 0.4
+                "grab": {
+                    "distance": 140,
+                    "line_linked": {
+                        "opacity": 1
+                    }
                 },
                 "push": {
                     "particles_nb": 4
