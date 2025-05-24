@@ -501,4 +501,47 @@ h1::after {
         transform: translateX(10%) scaleX(1);
         opacity: 1;
     }
+}
+
+/* Showcase Section */
+.showcase {
+    padding: 4rem 0;
+    background: var(--background-color);
+}
+
+.showcase-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.showcase-card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 2rem;
+    text-align: center;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.showcase-card:hover {
+    transform: translateY(-5px);
+}
+
+.showcase-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.showcase-card p {
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.showcase-card .btn {
+    display: inline-block;
+    margin-top: 1rem;
 } 
