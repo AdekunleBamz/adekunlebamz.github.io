@@ -501,7 +501,7 @@ h1::after {
         transform: translateX(10%) scaleX(1);
         opacity: 1;
     }
-}
+} 
 
 /* Showcase Section */
 .showcase {
