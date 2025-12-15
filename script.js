@@ -145,16 +145,4 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
-
-    // Handle CV download
-    const cvLink = document.querySelector('a[href$="CV.pdf"]');
-    if (cvLink) {
-        cvLink.addEventListener('click', function(e) {
-            const path = this.getAttribute('href');
-            if (!path.startsWith('http') && !path.startsWith('//')) {
-                const baseUrl = window.location.origin + window.location.pathname.replace(/\/[^/]*$/, '/');
-                this.href = baseUrl + path;
-            }
-        });
-    }
 }); 
